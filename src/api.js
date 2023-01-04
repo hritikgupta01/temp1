@@ -11,6 +11,14 @@ http.listen(PORT, () => {
 
 //app.use(express.static(__dirname + '/public'))
 
+
+
+// Socket 
+const io = require('socket.io')(http)
+
+
+const users = {};
+
 app.get('/', (req, res) => {
  
     // Sending the response
@@ -19,13 +27,6 @@ app.get('/', (req, res) => {
     // Ending the response
     res.end()
 })
-
-// Socket 
-const io = require('socket.io')(http)
-
-
-const users = {};
-
 
  io.on('connection', socket=>{
     console.log("connected");
