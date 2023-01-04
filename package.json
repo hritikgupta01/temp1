@@ -2,7 +2,7 @@
   "name": "netlify-express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api.js",
   "dependencies": {
     "express": "^4.16.4",
     "netlify-lambda": "^1.4.3",
