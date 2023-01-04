@@ -12,7 +12,12 @@ http.listen(PORT, () => {
 //app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+ 
+    // Sending the response
+    res.send('Hello World!')
+    
+    // Ending the response
+    res.end()
 })
 
 // Socket 
